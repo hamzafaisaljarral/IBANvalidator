@@ -41,3 +41,7 @@ Following command can be used to run test cases:
 - sudo docker-compose build
 - sudo docker-compose up
 
+# Validation API is deployed on Heroku as well for testing
+
+https://ibanvalidatorforbank.herokuapp.com/api/?country_code=SE&iban=PK45 5000 0000 0583 9825 7466
+
