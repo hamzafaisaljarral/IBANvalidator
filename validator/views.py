@@ -13,5 +13,5 @@ class ValidateAPIView(APIView):
         iban_func = IBANValidator(include_countries=upper(country_code))
         result = iban_func.verifyIBAN(value=iban)
         if result is not True:
-            return Response({"IBAN INVALID": result}, status=status.HTTP_200_OK)
+            return Response({"IBAN INVALID": result}, status=status.HTTP_400_BAD_REQUEST)
         return Response({"IBAN Valid": "country_code = {}, IBAN={}".format(country_code, iban)}, status=status.HTTP_200_OK)
